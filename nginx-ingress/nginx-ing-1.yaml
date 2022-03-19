@@ -7,6 +7,8 @@ metadata:
     kubernetes.io/ingress.allow-http: 'false'
     kubernetes.io/ingress.global-static-ip-name: gke-ingress-1
 spec:
+  tls:
+    - secretName: demo-cert
   rules:
     - host: '*.<<DOMAIN>>'
       http:
