@@ -28,7 +28,7 @@ OU = DevOps
 CN = ITS Software Services
 
 [v3_req]
-keyUsage = keyEncipherment, dataEncipherment
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
 extendedKeyUsage = serverAuth
 subjectAltName = @san_names
 
