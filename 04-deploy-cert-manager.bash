@@ -27,6 +27,3 @@ CLUSTER_ISSUER_FILE=cert-manager/cluster-issuer.yaml
 cp ${CLUSTER_ISSUER_FILE} ${CLUSTER_ISSUER_FILE}.tmp
 sed -i "s#__PROJECT__#${PROJECT}#g" ${CLUSTER_ISSUER_FILE}.tmp
 kubectl apply -n ${NS} -f ${CLUSTER_ISSUER_FILE}.tmp
-
-# Will move
-kubectl apply -n ${NS} -f cert-manager/demo-certificate.yaml
