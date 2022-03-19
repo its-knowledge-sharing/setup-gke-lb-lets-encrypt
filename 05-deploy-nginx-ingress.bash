@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source .env
+
 NS=ingress-nginx
 
 echo "####"
