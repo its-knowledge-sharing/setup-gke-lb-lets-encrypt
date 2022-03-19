@@ -8,6 +8,7 @@ spec:
   dnsNames:
     - '*.<<DOMAIN>>'
     - '<<DOMAIN>>'
+    - 'new.<<DOMAIN>>'
   issuerRef:
     name: lets-encrypt-issuer-prod
     kind: ClusterIssuer
