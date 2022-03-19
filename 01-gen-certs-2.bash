@@ -4,11 +4,10 @@ DOMAIN=its-software-services.com
 
 CERT_DIR=root-certs
 
-ROOT_KEY=ca.key
-ROOT_CERT=ca.crt
-EXT_FILE=ca.ext
-P12_FILE=ca.p12
-PWD_FILE=ca.password
+ROOT_KEY=ca2.key
+ROOT_CERT=ca2.crt
+EXT_FILE=ca2.ext
+PWD_FILE=ca2.password
 
 mkdir -p ${CERT_DIR}
 
@@ -34,7 +33,8 @@ extendedKeyUsage = serverAuth
 subjectAltName = @san_names
 
 [san_names]
-DNS.1 = *.${DOMAIN}
+DNS.1 = demo1.${DOMAIN}
+DNS.2 = demo2.${DOMAIN}
 EOF
 
 PASSWORD=$(openssl rand -base64 32 | cut -c1-16)
