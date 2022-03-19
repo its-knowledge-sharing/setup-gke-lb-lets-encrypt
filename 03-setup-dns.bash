@@ -29,4 +29,11 @@ gcloud dns record-sets transaction add ${IP} \
    --zone=${MANAGED_ZONE} \
    --project ${PROJECT}
 
+gcloud dns record-sets transaction add ${IP} \
+   --name="new.${DOMAIN}" \
+   --ttl=300 \
+   --type=A \
+   --zone=${MANAGED_ZONE} \
+   --project ${PROJECT}
+
 gcloud dns record-sets transaction execute --zone=${MANAGED_ZONE} --project ${PROJECT}
