@@ -1,0 +1,5 @@
+installCRDs: true
+fullnameOverride: cert-manager
+extraArgs:
+  - --dns01-recursive-nameservers-only=true
+  - --dns01-recursive-nameservers=8.8.8.8:53
