@@ -15,7 +15,7 @@ mkdir -p ${CERT_DIR}
 cat << EOF > ${CERT_DIR}/${EXT_FILE}
 [req]
 distinguished_name = req_distinguished_name
-
+default_bits = 2048
 req_extensions = v3_req
 prompt = no
 
@@ -29,8 +29,8 @@ CN = ITS Software Services
 
 [v3_req]
 keyUsage = nonRepudiation, digitalSignature, keyEncipherment
-extendedKeyUsage = serverAuth
 subjectAltName = @san_names
+basicConstraints = CA:FALSE
 
 [san_names]
 DNS.1 = demo1.${DOMAIN}
