@@ -4,7 +4,7 @@ kind: Ingress
 metadata:
   name: nginx-ing-2
   annotations:
-    networking.gke.io/managed-certificates: gcp-managed-cert-1
+    networking.gke.io/managed-certificates: gcp-managed-cert-3
     kubernetes.io/ingress.allow-http: 'false'
     kubernetes.io/ingress.global-static-ip-name: ingress-ip-2
 spec:

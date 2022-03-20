@@ -13,6 +13,9 @@ cp ${OUTPUT_FILE} ${OUTPUT_FILE}.tmp
 sed -i "s#<<DOMAIN>>#${DOMAIN2}#g" ${OUTPUT_FILE}.tmp
 kubectl apply -f ${OUTPUT_FILE}.tmp -n ${NS}
 
+# Create indenpendent ManagedCertificate without linking to LB will not work
+# If we link ManagedCertificate to existing LB, it will cause down time.
+
 OUTPUT_FILE=nginx-ingress/nginx-ing-2.yaml
 cp ${OUTPUT_FILE} ${OUTPUT_FILE}.tmp
 sed -i "s#<<DOMAIN>>#${DOMAIN2}#g" ${OUTPUT_FILE}.tmp
