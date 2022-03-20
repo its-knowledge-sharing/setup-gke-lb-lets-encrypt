@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: gcp-managed-cert-1
+spec:
+  domains:
+    - '<<DOMAIN>>'
+    - 'test1.<<DOMAIN>>'
